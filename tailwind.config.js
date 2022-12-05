@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         black: '#222222',
         white: '#FAF9F8',
+        red: '#E50010',
       },
       animation: {
         slideup: 'slideup 1s ease-in-out',
