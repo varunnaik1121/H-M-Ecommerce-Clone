@@ -17,15 +17,15 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" max-w-full bg-white flex justify-between px-4 py-4 items-center sm:px-8 md:py-3 md:px-14 md:pb-12">
+    <div className=" max-w-full bg-white flex justify-between px-4 py-4 items-center sm:px-8 md:py-3 md:px-14 md:pb-12 ">
       {isSearchOpen && <SearchBar />}
       {isSearchOpen === false && (
         <>
           <div className="w-max h-8 ">
             <img src={logo} alt="logo" className="w-full h-full" />
           </div>
-          <div className="flex items-center gap-6">
-            <div className="flex items-center justify-between cursor-pointer">
+          <div className="flex items-center gap-2 md:gap-4">
+            <div className="flex items-center justify-around cursor-pointer">
               <VscAccount className="w-6 h-6 text-black mx-1" />
               <p className="text-black hidden lg:block text-sm font-normal capitalize mx-1">
                 sign in

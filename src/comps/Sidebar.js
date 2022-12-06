@@ -3,7 +3,7 @@ import { sidebarCategories } from '../data/sidebarData';
 import { Link } from 'react-router-dom';
 const Sidebar = () => {
   return (
-    <div className="md:text-sm md:block md:min-w-[240px] md:max-w-[240px] md:px-5 md:h-full border-2 md:border-red-500 hidden">
+    <div className="md:text-sm md:block md:min-w-[240px] md:max-w-[240px] md:px-5 md:h-full  hidden">
       {sidebarCategories.map((category, i) => {
         return (
           <div
