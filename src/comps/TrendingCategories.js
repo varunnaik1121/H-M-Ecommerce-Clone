@@ -87,9 +87,9 @@ const TrendingCategories = () => {
   };
 
   return (
-    <div className="w-full h-full  mb-6">
+    <div className="w-full h-full  ">
       <div className="w-full">
-        <h3 className="text-lg md:font-medium font-sm capitalize font-semibold">
+        <h3 className="text-lg  font-sm capitalize font-semibold">
           Trending categories
         </h3>
       </div>

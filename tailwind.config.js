@@ -8,6 +8,7 @@ module.exports = {
         white: '#FAF9F8',
         red: '#E50010',
       },
+
       animation: {
         slideup: 'slideup 1s ease-in-out',
         slidedown: 'slidedown 1s ease-in-out',
@@ -15,6 +16,9 @@ module.exports = {
         slideright: 'slideright 1s ease-in-out',
         wave: 'wave 1.2s linear infinite',
         slowfade: 'slowfade .32s ease-in-out',
+      },
+      gridTemplateColumns: {
+        16: 'repeat(auto-fit, minmax(200px, 1fr))',
       },
       keyframes: {
         slowfade: {

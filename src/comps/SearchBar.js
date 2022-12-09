@@ -16,7 +16,7 @@ const SearchBar = () => {
     dispatch(closeSearch());
   };
   return (
-    <div className="w-full  flex items-center  animate-slowfade">
+    <div className="w-full  flex items-center animate-slowfade ">
       <form
         className="flex items-center justify-between"
         onSubmit={handleSearch}

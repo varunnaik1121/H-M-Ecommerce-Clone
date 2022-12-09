@@ -17,11 +17,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" max-w-full bg-white flex justify-between px-4 py-4 items-center sm:px-8 md:py-3 md:px-14 md:pb-12 ">
+    <div className=" max-w-full bg-white flex justify-between px-6 py-2 items-center sm:px-8 md:py-4 md:px-14 md:pb-12 ">
       {isSearchOpen && <SearchBar />}
       {isSearchOpen === false && (
         <>
-          <div className="w-max h-8 ">
+          <div className="w-max md:h-8 h-6">
             <img src={logo} alt="logo" className="w-full h-full" />
           </div>
           <div className="flex items-center gap-2 md:gap-4">
