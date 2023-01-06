@@ -1,46 +1,44 @@
 import React from 'react';
+
+import NewArrivals from './NewArrivals';
+import SingleAds from '../comps/SingleAds';
 import advertiseImage3 from '../assets/advertisementImage2.webp';
 import advertiseImage1 from '../assets/advertisementImage1.webp';
 import advertiseImage4 from '../assets/advertisementImage4.webp';
 import advertisement3 from '../assets/advertisement3.webp';
-import NewArrivals from './NewArrivals';
-import HomeButton from './StyledComponents/HomeButton';
-import { useDimension } from '../Hooks/useDimension';
+import section3mobileImage from '../assets/section3mobileImage.webp';
+import section3LaptopImage from '../assets/section3LaptopImage.webp';
 import TrendingCategories from './TrendingCategories';
 const Hero = () => {
-  const width = useDimension();
+  return (
+    <div className="lg:w-[85%] xl:w-[70%] w-full md:px-6 px-5 ">
+      <div className="w-full h-full flex flex-col gap-1">
+        <SingleAds
+          mobileImage={advertiseImage3}
+          laptopImage={advertisement3}
+          info={'Seasonal prints and cosy details ahead'}
+          title={'festive check'}
+          subtitle={'Seasonal prints and cosy details ahead'}
+          btnName={'shop Now'}
+        />
+        <SingleAds
+          mobileImage={advertiseImage1}
+          laptopImage={advertiseImage4}
+          info={'Seasonal prints and cosy details ahead'}
+          title={'festive check'}
+          subtitle={'Seasonal prints and cosy details ahead'}
+          btnName={'shop Now'}
+        />
 
-return (
-    <div className="lg:w-[70%]  w-full md:px-6 px-5 ">
-      <div className="w-full  h-full flex flex-col gap-1">
-        <div className="w-full lg:h-full  relative mb-5">
-          <img
-            src={width <= 1024 ? advertiseImage3 : advertisement3}
-            alt="model"
-            className="w-full lg:h-full object-cover "
-          />
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[rgba(0,0,0,.2)]"></div>
-          <div className="text-4xl uppercase font-bold absolute top-8 text-white">
-            <p className="">Black pink </p>
-            <span>merch</span>
-            <p className="text-sm  font-normal">Rev up your new style</p>
-            <HomeButton title={'Shop Now'} />
-          </div>
-        </div>
-        <div className="w-full lg:max-h-[600px] h-350px relative mb-5 ">
-          <img
-            src={width <= 1024 ? advertiseImage1 : advertiseImage4}
-            alt="model"
-            className="w-full lg:h-full object-cover bg-center"
-          />
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[rgba(0,0,0,.2)]"></div>
-          <div className="text-4xl uppercase font-bold absolute top-8 text-white ">
-            <p className="">Festive check! </p>
-            <span>Seasonal prints and cosy details ahead</span>
-          </div>
-        </div>
         <TrendingCategories />
         <NewArrivals />
+        <SingleAds
+          mobileImage={section3LaptopImage}
+          laptopImage={section3mobileImage}
+          title={'Warm in any weather'}
+          subtitle={'Embrace the new season in warm styles for your baby'}
+          btnName={'shop now'}
+        />
       </div>
     </div>
   );

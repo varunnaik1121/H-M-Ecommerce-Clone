@@ -7,6 +7,7 @@ module.exports = {
         black: '#222222',
         white: '#FAF9F8',
         red: '#E50010',
+        gray: '#E4E4E4',
       },
 
       animation: {
@@ -18,7 +19,7 @@ module.exports = {
         slowfade: 'slowfade .32s ease-in-out',
       },
       gridTemplateColumns: {
-        16: 'repeat(auto-fit, minmax(200px, 1fr))',
+        16: 'repeat(auto-fit, minmax(150px, 1fr))',
       },
       keyframes: {
         slowfade: {

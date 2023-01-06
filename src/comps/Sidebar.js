@@ -1,10 +1,10 @@
 import React from 'react';
-import { sidebarCategories } from '../data/sidebarData';
+
 import { Link } from 'react-router-dom';
-const Sidebar = () => {
+const Sidebar = ({ data }) => {
   return (
-    <div className="md:text-sm lg:block lg:min-w-[240px] lg:max-w-[240px] lg:px-5 lg:h-full  hidden">
-      {sidebarCategories.map((category, i) => {
+    <div className="md:text-sm md:block sm:min-w-[200px] md:min-w-[240px] md:max-w-[240px] lg:px-5 lg:h-full  hidden pl-4">
+      {data.map((category, i) => {
         return (
           <div
             className="md:flex items-start justify-start flex-col p-3 capitalize hidden"

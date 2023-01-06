@@ -26,7 +26,7 @@ const NewArrivals = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full items-start justify-center mb-4">
+    <div className="flex flex-col w-full items-start justify-center mb-8">
       <div>
         <h3 className="text-lg font-semibold mb-4">New Arrivals</h3>
       </div>

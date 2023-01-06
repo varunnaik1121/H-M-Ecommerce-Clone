@@ -106,7 +106,7 @@ const TrendingCategories = () => {
           {data.map((value, i) => {
             return (
               <SwiperSlide className="w-full  h-max flex flex-col items-center">
-                <div className=" w-full  h-full max-w-[110px]">
+                <div className=" w-full  h-full max-w-[100px]">
                   <img
                     src={value.image}
                     alt="image"

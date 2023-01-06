@@ -9,141 +9,154 @@ import { useRef } from 'react';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { useState } from 'react';
+import { useDimension } from '../Hooks/useDimension';
 const ProductsSlider = () => {
   const [sliderRef, setSliderRef] = useState(null);
+  const width = useDimension();
+  const setSlidesToShow = () => {
+    if (width >= 1024) {
+      return 4;
+    }
+    if (width < 1024 && width >= 700) {
+      return 3;
+    }
+    if (width > 0 && width < 700) {
+      return 2;
+    }
+  };
   const cardsData = [
     {
-      modelImage: '',
-      productImage: productImage1,
-      originalPrice: 1299,
+      modelImage: productImage1,
+      productImage: '',
+      originalPrice: 1299.0,
       discountPrice: 999,
       isNewArrival: false,
-      availableColors: ['red', 'blue', 'green', 'black'],
+      availableColors: ['cyan-500', 'indigo-400', 'indigo-400'],
       title: 'knitted bodycorn dress',
       path: '',
     },
     {
-      modelImage: '',
-      productImage: productImage2,
+      modelImage: productImage2,
+      productImage: '',
       originalPrice: 1299,
       discountPrice: 999,
       isNewArrival: false,
-      availableColors: ['red', 'blue', 'green', 'black'],
+      availableColors: ['cyan-500', 'cyan-500', 'cyan-500'],
       title: 'noob dress',
       path: '',
     },
     {
-      modelImage: '',
-      productImage: productImage2,
+      modelImage: productImage2,
+      productImage: '',
       originalPrice: 1299,
       discountPrice: 999,
       isNewArrival: false,
-      availableColors: ['red', 'blue', 'green', 'black'],
+      availableColors: ['cyan-500', 'indigo-400', 'cyan-500'],
       title: 'noob dress',
       path: '',
     },
     {
-      modelImage: '',
-      productImage: productImage2,
+      modelImage: productImage2,
+      productImage: '',
       originalPrice: 1299,
       discountPrice: 999,
       isNewArrival: false,
-      availableColors: ['red', 'blue', 'green', 'black'],
+      availableColors: ['cyan-500', 'indigo-400', 'cyan-500'],
       title: 'noob dress',
       path: '',
     },
     {
-      modelImage: '',
-      productImage: productImage2,
+      modelImage: productImage2,
+      productImage: '',
       originalPrice: 1299,
       discountPrice: 999,
       isNewArrival: false,
-      availableColors: ['red', 'blue', 'green', 'black'],
+      availableColors: ['cyan-500', 'indigo-400', 'cyan-500'],
       title: 'noob dress',
       path: '',
     },
     {
-      modelImage: '',
-      productImage: productImage2,
+      modelImage: productImage2,
+      productImage: '',
       originalPrice: 1299,
       discountPrice: 999,
       isNewArrival: false,
-      availableColors: ['red', 'blue', 'green', 'black'],
+      availableColors: ['cyan-500', 'indigo-400', 'cyan-500'],
       title: 'noob dress',
       path: '',
     },
     {
-      modelImage: '',
-      productImage: productImage2,
+      modelImage: productImage2,
+      productImage: '',
       originalPrice: 1299,
       discountPrice: 999,
       isNewArrival: false,
-      availableColors: ['red', 'blue', 'green', 'black'],
+      availableColors: ['cyan-500', 'indigo-400', 'cyan-500'],
       title: 'noob dress',
       path: '',
     },
     {
-      modelImage: '',
-      productImage: productImage2,
+      modelImage: productImage2,
+      productImage: '',
       originalPrice: 1299,
       discountPrice: 999,
       isNewArrival: false,
-      availableColors: ['red', 'blue', 'green', 'black'],
+      availableColors: ['cyan-500', 'indigo-400', 'cyan-500'],
       title: 'noob dress',
       path: '',
     },
     {
-      modelImage: '',
-      productImage: productImage2,
+      modelImage: productImage2,
+      productImage: '',
       originalPrice: 1299,
       discountPrice: 999,
       isNewArrival: false,
-      availableColors: ['red', 'blue', 'green', 'black'],
+      availableColors: ['cyan-500', 'indigo-400', 'cyan-500'],
       title: 'noob dress',
       path: '',
     },
     {
-      modelImage: '',
-      productImage: productImage2,
+      modelImage: productImage2,
+      productImage: '',
       originalPrice: 1299,
       discountPrice: 999,
       isNewArrival: false,
-      availableColors: ['red', 'blue', 'green', 'black'],
+      availableColors: ['cyan-500', 'indigo-400', 'cyan-500'],
       title: 'noob dress',
       path: '',
     },
     {
-      modelImage: '',
-      productImage: productImage2,
+      modelImage: productImage2,
+      productImage: '',
       originalPrice: 1299,
       discountPrice: 999,
       isNewArrival: false,
-      availableColors: ['red', 'blue', 'green', 'black'],
+      availableColors: ['cyan-500', 'indigo-400', 'cyan-500'],
       title: 'noob dress',
       path: '',
     },
   ];
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: setSlidesToShow(),
+    slidesToScroll: setSlidesToShow(),
   };
   return (
-    <div className="w-full  relative border-2 ">
+    <div className="w-full  relative  ">
       <div className="w-full h-full absolute sm:flex  top-0 left-0 hidden">
         <button
           onClick={sliderRef?.slickPrev}
           className="absolute -left-8 top-[50%] translate-y-1/2"
         >
-          <AiOutlineArrowLeft className="text-xl text-black font-normal opacity-70 hover:text-red" />
+          <AiOutlineArrowLeft className="text-xl  font-normal opacity-70 hover:text-red" />
         </button>
         <button
           onClick={sliderRef?.slickNext}
           className="absolute -right-8 top-[50%] translate-y-1/2"
         >
-          <AiOutlineArrowRight className="text-xl text-black font-normal opacity-70 hover:text-red" />
+          <AiOutlineArrowRight className="text-xl  font-normal opacity-70 hover:text-red" />
         </button>
       </div>
       <Slider
@@ -151,10 +164,10 @@ const ProductsSlider = () => {
         ref={setSliderRef}
         className="w-full flex justify-evenly"
       >
-        {cardsData.map((value) => {
+        {cardsData.map((value, i) => {
           return (
-            <div className="w-full grid grid-cols-16">
-              <Card data={value} />
+            <div className="w-full grid grid-cols-16 ">
+              <Card data={value} index={i} isAddedToCart isNewArrival />
             </div>
           );
         })}
