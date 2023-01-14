@@ -77,7 +77,7 @@ const Footer = () => {
       <div className="lg:w-[60%] m-auto flex align-middle justify-start flex-col w-full">
         <div className="w-full  flex lg:flex-row flex-col ">
           {footerInfo.map((item, index) => {
-            return <FooterAccordin data={item} />;
+            return <FooterAccordin data={item} key={index} />;
           })}
         </div>
         <div className=" w-full flex justify-center py-2">

@@ -6,7 +6,7 @@ const CategoryDescription = ({ description, title }) => {
   return (
     <div className="w-full flex flex-col">
       <div className="w-full text-center my-4">
-        <h1 className="font-medium  sm:text-[30px] text-[24px]">{title}</h1>
+        <h1 className="font-semibold  sm:text-[34px] text-[28px]">{title}</h1>
       </div>
       <div className="w-full text-centuries">
         <p className="text-[12px] font-medium  overflow-hidden">

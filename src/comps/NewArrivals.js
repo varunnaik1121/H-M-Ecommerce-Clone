@@ -7,21 +7,27 @@ const NewArrivals = () => {
   const chipsData = [
     {
       title: 'ladies',
+      path: '/ladies',
     },
     {
       title: 'men',
+      path: '/men',
     },
     {
       title: 'kids',
+      path: '/kids',
     },
     {
       title: 'babies',
+      path: '/babies',
     },
     {
       title: 'babies',
+      path: '/babies',
     },
     {
       title: 'babies',
+      path: '/babies',
     },
   ];
 

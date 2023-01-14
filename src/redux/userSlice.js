@@ -3,6 +3,7 @@ export const userSlice = createSlice({
   name: 'user',
   initialState: {
     isSearchOpen: false,
+    isSidebarFilterOpen: true,
   },
 
   reducers: {
@@ -11,6 +12,12 @@ export const userSlice = createSlice({
     },
     closeSearch: (state) => {
       state.isSearchOpen = false;
+    },
+    openSidebarFilter: (state) => {
+      state.isSidebarFilterOpen = true;
+    },
+    closeSidebarFilter: (state) => {
+      state.isSidebarFilterOpen = false;
     },
   },
 });

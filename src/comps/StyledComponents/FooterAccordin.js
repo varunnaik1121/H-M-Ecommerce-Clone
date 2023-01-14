@@ -39,8 +39,8 @@ const FooterAccordin = ({ data }) => {
           } `}
         >
           {data.subtitle.map((item, i) => (
-            <a href={item.path} className="py-1 capitalize">
-              <p key={i}>{item.name}</p>
+            <a href={item.path} className="py-1 capitalize" key={i}>
+              <p>{item.name}</p>
             </a>
           ))}
         </div>
