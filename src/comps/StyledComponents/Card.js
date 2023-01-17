@@ -31,7 +31,12 @@ const Card = ({ data, index, isAddedToCart, isNewArrival }) => {
         </p>
         <div>
           {['#8f44fd', '#121212', '#50d71e'].map((color, i) => {
-            return <div className={`bg-[${color}] w-2 h-2 rounded-full`}></div>;
+            return (
+              <div
+                className={`bg-[${color}] w-2 h-2 rounded-full`}
+                key={i}
+              ></div>
+            );
           })}
           {/* <div className="bg-[#8f44fd] w-2 h-2 rounded-full"></div>
           <div className="bg-[#121212] w-2 h-2 rounded-full"></div>

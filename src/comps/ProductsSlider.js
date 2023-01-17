@@ -166,7 +166,7 @@ const ProductsSlider = () => {
       >
         {cardsData.map((value, i) => {
           return (
-            <div className="w-full grid grid-cols-16 ">
+            <div className="w-full grid grid-cols-16 " key={i}>
               <Card data={value} index={i} isAddedToCart isNewArrival />
             </div>
           );

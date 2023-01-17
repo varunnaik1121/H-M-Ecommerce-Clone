@@ -13,8 +13,14 @@ const ClothType = () => {
   return (
     <Wrapper open={isSidebarFilterOpen}>
       <Sidebar data={sidebarCategories} />
-      <Title title={clothType} />
-      {isSidebarFilterOpen && <SidebarFilter totalItems={'241'} />}
+      <div className="xl:w-[65%] w-full sm:m-6 sm:w-full flex flex-col mt-2 mx-4 border  ">
+        <Title title={clothType} />
+        {isSidebarFilterOpen && <SidebarFilter totalItems={'241'} />}
+        <div className="w-full border-1 flex justify-between">
+          <div>left</div>
+          <div>Right</div>
+        </div>
+      </div>
     </Wrapper>
   );
 };

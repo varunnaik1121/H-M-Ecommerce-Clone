@@ -22,5 +22,10 @@ export const userSlice = createSlice({
   },
 });
 
-export const { openSearch, closeSearch } = userSlice.actions;
+export const {
+  openSearch,
+  closeSearch,
+  openSidebarFilter,
+  closeSidebarFilter,
+} = userSlice.actions;
 export default userSlice.reducer;
