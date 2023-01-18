@@ -6,9 +6,16 @@ import { sidebarCategories } from '../../data/sidebarData';
 import Title from '../StyledComponents/Title';
 import SidebarFilter from './SidebarFilter';
 import { useSelector } from 'react-redux';
+import SlidingBar from '../StyledComponents/SlidingBar';
 const ClothType = () => {
   const { clothType } = useParams();
   const { isSidebarFilterOpen } = useSelector((state) => state.user);
+  const clothColors = [
+    { color: 'red', code: '#FF0000' },
+    { color: 'blue', code: '#8f44fd' },
+    { color: 'green', code: '#00FF00' },
+    { color: 'orange', code: '"fff' },
+  ];
 
   return (
     <Wrapper open={isSidebarFilterOpen}>
@@ -17,7 +24,9 @@ const ClothType = () => {
         <Title title={clothType} />
         {isSidebarFilterOpen && <SidebarFilter totalItems={'241'} />}
         <div className="w-full border-1 flex justify-between">
-          <div>left</div>
+          <div className="w-full ">
+            <SlidingBar title={'sort by'} collections={clothColors} />
+          </div>
           <div>Right</div>
         </div>
       </div>

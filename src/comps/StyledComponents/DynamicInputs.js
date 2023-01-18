@@ -27,7 +27,7 @@ const DynamicInputs = ({ value, handleRadioClick, index }) => {
   return (
     <>
       {value.type === 'radio' && (
-        <div className="w-full flex py-3 px-2  items-center hover:bg-[#F4EDDD]">
+        <div className="w-full flex py-3 px-2  items-center hover:bg-[#F4EDDD] ">
           {
             <div className="flex items-center w-full cursor-pointer">
               <input
@@ -54,7 +54,7 @@ const DynamicInputs = ({ value, handleRadioClick, index }) => {
         </div>
       )}
       {value.type === 'checkbox' && (
-        <div className="w-full flex py-3 px-2  items-center hover:bg-[#F4EDDD] justify-between">
+        <div className="w-full flex py-3 px-2  items-center hover:bg-[#F4EDDD] justify-between  ">
           {
             <>
               <div className="flex items-center">

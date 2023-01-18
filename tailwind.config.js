@@ -12,7 +12,7 @@ module.exports = {
 
       animation: {
         slideup: 'slideup 1s ease-in-out',
-        slidedown: 'slidedown 1s ease-in-out',
+        slidedown: 'slidedown .5s ease-in-out',
         slideleft: 'slideleft 1s ease-in-out',
         slideright: 'slideright 1s ease-in-out',
         wave: 'wave 1.2s linear infinite',
