@@ -211,4 +211,35 @@ export const SidebarFilterData = [
       },
     ],
   },
+  {
+    title: 'colours',
+    mainTitle: 'colours',
+    icon: <HiArrowRight />,
+    type: 'normal',
+    doesHaveChildren: true,
+    children: [
+      {
+        title: 'red',
+        mainTitle: 'colours',
+
+        type: 'checkbox',
+        specific: 'colours',
+        doesHaveChildren: false,
+
+        availableItems: 20,
+        children: [],
+        isChecked: false,
+      },
+      {
+        title: 'orange',
+        type: 'checkbox',
+        specific: 'colours',
+        mainTitle: 'colours',
+        doesHaveChildren: false,
+        availableItems: 20,
+        children: [],
+        isChecked: false,
+      },
+    ],
+  },
 ];

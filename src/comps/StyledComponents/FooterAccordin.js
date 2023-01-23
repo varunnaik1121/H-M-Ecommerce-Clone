@@ -8,7 +8,7 @@ const FooterAccordin = ({ data }) => {
   return (
     <>
       <div className="w-full lg:flex lg:justify-center lg:flex-col lg:align-middle lg:px-2 lg:py-4 hidden ">
-        <div className="font-medium py-4 text-sm uppercase hidden lg:block ">
+        <div className="font-medium py-4 text-sm uppercase hidden lg:block">
           {data.title}
         </div>
 
@@ -24,7 +24,7 @@ const FooterAccordin = ({ data }) => {
           })}
         </div>
       </div>
-      <div className="lg:hidden  w-full  max-auto flex justify-center items-center flex-col ">
+      <div className="lg:hidden  w-full  max-auto flex justify-center items-center flex-col">
         <div className="flex  w-[85%] items-center justify-between mx-auto  p-2">
           <div className=" font-medium py-2 text-sm uppercase text-black">
             {data.title}
@@ -35,7 +35,7 @@ const FooterAccordin = ({ data }) => {
         </div>
         <div
           className={`w-[85%]  p-2 text-[12px] ${
-            isAccordinOpen ? 'flex flex-col ' : 'hidden'
+            isAccordinOpen ? 'flex flex-col' : 'hidden'
           } `}
         >
           {data.subtitle.map((item, i) => (
