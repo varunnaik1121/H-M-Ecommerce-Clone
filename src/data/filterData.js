@@ -219,7 +219,7 @@ export const SidebarFilterData = [
     doesHaveChildren: true,
     children: [
       {
-        title: 'red',
+        title: 'yellow',
         mainTitle: 'colours',
 
         type: 'checkbox',
@@ -231,7 +231,7 @@ export const SidebarFilterData = [
         isChecked: false,
       },
       {
-        title: 'orange',
+        title: 'blue',
         type: 'checkbox',
         specific: 'colours',
         mainTitle: 'colours',

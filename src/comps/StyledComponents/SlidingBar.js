@@ -15,7 +15,7 @@ const SlidingBar = () => {
   }, [index]);
 
   return (
-    <div className="w-full border-1 flex">
+    <div className="w-full border-1  relative z-50 hidden md:flex">
       {SidebarFilterData.map((menuData, i) => {
         return (
           <div className="flex items-center relative mr-3 ">

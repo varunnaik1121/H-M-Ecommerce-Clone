@@ -3,7 +3,7 @@ export const userSlice = createSlice({
   name: 'user',
   initialState: {
     isSearchOpen: false,
-    isSidebarFilterOpen: true,
+    isSidebarFilterOpen: false,
   },
 
   reducers: {
@@ -27,5 +27,6 @@ export const {
   closeSearch,
   openSidebarFilter,
   closeSidebarFilter,
+  isSidebarFilterOpen,
 } = userSlice.actions;
 export default userSlice.reducer;
