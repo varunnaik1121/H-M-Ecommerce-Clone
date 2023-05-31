@@ -40,7 +40,19 @@ const ClothType = () => {
               </button>
             </div>
           </div>
-          <div>Right</div>
+          <div className="flex items-center px-3">
+            <div className="flex items-center mr-6">
+              <button className="text-[13px] font-medium capitalize px-3 text-red">
+                model
+              </button>
+              <button className="text-[13px] font-medium capitalize">
+                product
+              </button>
+            </div>
+            <div>
+              <p className="text-[13px] font-medium capitalize">442 items</p>
+            </div>
+          </div>
         </div>
         <div className="mt-5 grid xl:grid-cols-4 sm:grid-cols-3 grid-cols-2 ">
           {cardsData.map((data, index) => {

@@ -35,20 +35,21 @@ const Card = ({ data, isAddedToCart, isNewArrival, isNotSlider }) => {
         </a>
         <p className="text-[12px]   font-medium">Rs.{data.originalPrice}.00</p>
         <div className="flex my-1 items-center  ">
-          {data?.colors?.slice(0, 3).map((color, i) => {
-            return (
-              <>
-                <Tooltip title={color.title} aria-label="add">
-                  <div
-                    className={`w-2 h-2 rounded-full mr-[4px] `}
-                    key={i}
-                    style={{ backgroundColor: `${color.color}` }}
-                  ></div>
-                </Tooltip>
-              </>
-            );
-          })}
-          {data?.colors?.length > 3 && (
+          {data.colors &&
+            data?.colors?.slice(0, 3).map((color, i) => {
+              return (
+                <>
+                  <Tooltip title={color.title} aria-label="add">
+                    <div
+                      className={`w-2 h-2 rounded-full mr-[4px] `}
+                      key={i}
+                      style={{ backgroundColor: `${color.color}` }}
+                    ></div>
+                  </Tooltip>
+                </>
+              );
+            })}
+          {data.colors && data?.colors?.length > 3 && (
             <p className="text-[10px] ml-1 leading-[6px]">
               +{parseInt(data?.colors?.length) - 3}
             </p>
