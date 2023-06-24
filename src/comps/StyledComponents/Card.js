@@ -21,8 +21,8 @@ const Card = ({ data, isAddedToCart, isNewArrival, isNotSlider }) => {
             {isAddedToCart ? (
               <BsFillHeartFill className="text-xl text-red font-thin" />
             ) : (
-              <img className="w-[26px] h-[26px]  " alt="icon" src={heartIcon} />
-            )}
+              <img src={heartIcon} className='right-0 w-[25px] h-auto'></img>
+            )} 
           </div>
         </a>
       </div>

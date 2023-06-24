@@ -27,7 +27,7 @@ const SidebarFilter = ({ totalItems }) => {
   };
   return (
     <>
-      <div className="sm:max-w-[450px] w-full top-0 right-0 h-full bg-[#FAF9F8] min-h-100vh z-[100] py-6 px-7 absolute transition-transform">
+      <div className="sm:max-w-[450px] w-full top-0 right-0    bg-[#FAF9F8] h-full z-[999] py-6 px-7 overflow-hidden fixed transition-transform ">
         <div className="w-full flex py-5 items-center">
           {history.length > 0 && (
             <button onClick={() => handleBack()} className="absolute left-4">

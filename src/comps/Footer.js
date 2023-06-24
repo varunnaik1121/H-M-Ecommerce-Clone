@@ -6,7 +6,7 @@ import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
-
+import logo from '../assets/logo.png';
 import { Tooltip } from '@mui/material';
 const Footer = () => {
   const footerInfo = [
@@ -99,12 +99,16 @@ const Footer = () => {
       <div className="w-full flex justify-center py-4 relative">
         <p className="lg:max-w-[60%] w-full text-[12px] leading-6 text-center px-4">
           The content of this site is copyright-protected and is the property of
-          H & M Hennes & Mauritz AB. H&M’s business concept is to offer fashion
-          and quality at the best price in a sustainable way. H&M has since it
-          was founded in 1947 grown into one of the world's leading fashion
-          companies. H&M
+          H & M Hennes & Mauritz AB.
         </p>
       </div>
+        <div className="flex-1 flex justify-center items-center py-3">
+          <img
+            src={logo}
+            alt="logo"
+            className="w-[30px] h-auto object-contain saturate-0"
+          />
+        </div>
     </div>
   );
 };

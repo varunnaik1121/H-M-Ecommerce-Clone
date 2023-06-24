@@ -14,6 +14,7 @@ export const userSlice = createSlice({
       state.isSearchOpen = false;
     },
     openSidebarFilter: (state) => {
+      console.log('you clicked open sidebar button');
       state.isSidebarFilterOpen = true;
     },
     closeSidebarFilter: (state) => {

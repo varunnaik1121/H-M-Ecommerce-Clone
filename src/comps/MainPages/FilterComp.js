@@ -39,7 +39,7 @@ const FilterComp = ({ data, handleClick, handleBack }) => {
       {data.map((value, index) => {
         return (
           <div
-            className="w-full flex  justify-between items-center  py-2  px-2 "
+            className="w-full flex border  justify-between items-center  py-2  px-2 "
             key={index}
           >
             {value.type === 'normal' ? (
