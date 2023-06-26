@@ -13,7 +13,9 @@ const Home = () => {
   const { isSidebarFilterOpen } = useSelector((state) => state.user);
 
   return (
-    <div className={`w-full min-h-[100vh] overflow-hidden  bg-white  pt-3 relative  `}>
+    <div
+      className={`w-full min-h-[100vh] overflow-hidden  bg-white   relative  `}
+    >
       {isSidebarFilterOpen && (
         <div className=" w-[100vw] min-h-full  bg-[rgba(0,0,0,.5)] z-50 overflow-hidden top-0 left-0 bottom-0 right-0 absolute"></div>
       )}
@@ -24,12 +26,12 @@ const Home = () => {
         <Outlet />
       </div>
       <Footer />
-      {isSidebarFilterOpen && <SidebarFilter />}
+      {/* {isSidebarFilterOpen && <SidebarFilter />}
       {
         <button onClick={() => dispatch(openSidebarFilter())}>
           openSidebar
         </button>
-      }
+      } */}
     </div>
   );
 };

@@ -9,6 +9,7 @@ import CategoriesPage from './pages/Categories';
 import SubCategory from './comps/MainPages/SubCategory';
 import Product from './comps/MainPages/Product';
 import ClothType from './comps/MainPages/ClothType';
+import ProductPage from './comps/MainPages/ProductPage';
 function App() {
   return (
     <>
@@ -28,6 +29,10 @@ function App() {
               path="/:categories/:subCategory/:clothType"
               element={<ClothType></ClothType>}
             ></Route>
+          </Route>
+
+          <Route path="product" element={<Home />}>
+            <Route path=":id" element={<ProductPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

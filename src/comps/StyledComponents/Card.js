@@ -21,27 +21,29 @@ const Card = ({ data, isAddedToCart, isNewArrival, isNotSlider }) => {
             {isAddedToCart ? (
               <BsFillHeartFill className="text-xl text-red font-thin" />
             ) : (
-              <img src={heartIcon} className='right-0 w-[25px] h-auto'></img>
-            )} 
+              <img src={heartIcon} className="right-0 w-[30px] h-auto"></img>
+            )}
           </div>
         </a>
       </div>
-      <div className="w-full">
+      <div className="w-full ">
         <a
           className=" hover:underline cursor-pointer font-medium capitalize"
           href="#"
         >
           <p className="text-[12px] mt-4  text-black">{data.title}</p>
         </a>
-        <p className="text-[12px]   font-medium">Rs.{data.originalPrice}.00</p>
-        <div className="flex my-1 items-center  ">
+        <p className="text-[12px]   font-medium mt-1">
+          Rs.{data.originalPrice}.00
+        </p>
+        <div className="flex  items-center  ">
           {data.colors &&
             data?.colors?.slice(0, 3).map((color, i) => {
               return (
                 <>
                   <Tooltip title={color.title} aria-label="add">
                     <div
-                      className={`w-2 h-2 rounded-full mr-[4px] `}
+                      className={`w-2 h-2 rounded-full mr-[4px] my-2 `}
                       key={i}
                       style={{ backgroundColor: `${color.color}` }}
                     ></div>
@@ -58,7 +60,9 @@ const Card = ({ data, isAddedToCart, isNewArrival, isNotSlider }) => {
           <div className="bg-[#121212] w-2 h-2 rounded-full"></div>
           <div className="bg-[#4f4f4f] w-2 h-2 rounded-full"></div> */}
         </div>
-        <p className="text-[11px] my-1">{isNewArrival ? 'New Arrival' : ''}</p>
+        <p className="text-[10px] tracking-wide my-1">
+          {isNewArrival ? 'New Arrival' : ''}
+        </p>
       </div>
     </div>
   );

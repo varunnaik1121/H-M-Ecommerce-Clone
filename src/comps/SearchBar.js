@@ -28,7 +28,7 @@ const SearchBar = () => {
           <input
             type={'text'}
             autoFocus
-            className="min-w-[80vw] px-3 py-2 outline-none border-hidden bg-transparent placeholder:text-medium placeholder:text-[#000] placeholder:text-[12px] placeholder:text-medium text-sm "
+            className="min-w-[80vw] px-3  border outline-none border-hidden bg-transparent placeholder:text-medium placeholder:text-[#000] placeholder:text-[12px] placeholder:text-medium text-sm "
             placeholder="Search products"
           />
         </div>

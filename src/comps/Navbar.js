@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" max-w-full bg-white flex justify-between px-6 py-2 items-center sm:px-8 md:py-4 md:px-14 md:pb-12 ">
+    <div className=" max-w-full bg-white flex border  justify-between px-6 py-5 items-center sm:px-8 md:py-4 md:px-14 md:pb-12 ">
       {isSearchOpen && <SearchBar />}
       {isSearchOpen === false && (
         <>

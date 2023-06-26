@@ -11,7 +11,7 @@ const MultiStepMenu = ({ data, index }) => {
   const [isChildOpen, setIsOpenChild] = useState(false);
   console.log({ data });
   return (
-    <div className={`w-full  relative  z-50  hover bg-[#fff]`}>
+    <div className={`w-full  relative border  z-50  hover bg-[#fff]`}>
       {type === 'normal' && (
         <div>
           <div className="w-full flex justify-between items-center relative">
