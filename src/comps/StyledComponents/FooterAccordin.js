@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { AiOutlineDown } from 'react-icons/ai';
 
-const FooterAccordin = ({ data }) => {
+const FooterAccordin = ({ data,isProduct }) => {
   const [isAccordinOpen, setIsAccordinOpen] = useState(false);
 
   return (
     <>
       <div className="w-full lg:flex lg:justify-center lg:flex-col lg:align-middle lg:px-2 lg:py-4 hidden ">
-        <div className="font-medium py-4 text-sm uppercase hidden lg:block">
+        <div className={`font-medium py-4 text-sm  uppercase hidden lg:block`}>
           {data.title}
         </div>
 

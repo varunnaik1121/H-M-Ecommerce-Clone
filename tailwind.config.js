@@ -8,6 +8,7 @@ module.exports = {
         white: '#FAF9F8',
         red: '#E50010',
         gray: '#E4E4E4',
+        darkGray: '#D0D0D0',
       },
 
       animation: {
