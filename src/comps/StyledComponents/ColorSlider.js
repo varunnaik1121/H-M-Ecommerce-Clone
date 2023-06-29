@@ -7,14 +7,14 @@ const ColorSlider = ({ data }) => {
     setSelected(idx);
   };
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-2  justify-center  lg:justify-start ">
       {data.map((value, idx) => {
         return (
           <>
             <button
               key={idx}
               className={`cursor-pointer ${
-                idx === selected && 'outline-1 outline'
+                idx === selected && 'outline-1 outline shadow-md'
               }`}
               value={value.colorName}
               onClick={() => handleSelected(idx)}
