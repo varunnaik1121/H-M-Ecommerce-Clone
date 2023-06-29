@@ -96,6 +96,7 @@ const ProductPage = () => {
   //a state to select
   const [selectedSize, setSelectedSize] = useState('');
   const [productData, setProductData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const handleSizeClick = (size, index) => {
     setSelectedSize(size);
@@ -110,8 +111,19 @@ const ProductPage = () => {
   console.log({ productData, id });
 
   useEffect(() => {
+    setLoading(true);
     fetchItem(id);
+    setLoading(false);
   }, [id]);
+
+  //probably add some loaders
+  if (productData.length === 0) {
+    return (
+      <div className="min-h-[100vh] flex justify-center items-center">
+        Loading.....
+      </div>
+    );
+  }
   return (
     <div className="w-full flex px-4 gap-2 relative flex-col lg:flex-row">
       <div className="flex-row gap-3  ">

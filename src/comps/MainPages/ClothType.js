@@ -10,6 +10,7 @@ import SlidingBar from '../StyledComponents/SlidingBar';
 import { openSidebarFilter } from '../../redux/userSlice';
 import { BsFilterRight } from 'react-icons/bs';
 import { cardsData } from '../../data/cardsData';
+import { allProducts } from '../../data/singleProductData';
 import Card from '../StyledComponents/Card';
 import { BiCheckbox, BiGridAlt } from 'react-icons/bi';
 import { LinearProgress } from '@mui/material';
@@ -79,7 +80,7 @@ const ClothType = () => {
           </div>
         </div>
         <div className="mt-5 grid xl:grid-cols-4 sm:grid-cols-3 grid-cols-2 ">
-          {cardsData.map((data, index) => {
+          {allProducts?.map((data, index) => {
             return (
               <Card data={data} isNewArrival={data.isNewArrival} isNotSlider />
             );

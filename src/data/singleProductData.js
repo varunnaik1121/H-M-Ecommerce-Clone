@@ -12,6 +12,8 @@ import gridImage2 from '../assets/gridImage2.webp';
 import gridImage3 from '../assets/gridImage3.webp';
 import gridImage4 from '../assets/gridImage4.webp';
 
+import whitePrimaryTumbnail from '../assets/whitePrimaryTumbnail.webp';
+import brownPrimaryTumbnail from '../assets/brownPrimaryTumbnail.webp';
 export const allProducts = [
   {
     id: 12990,
@@ -24,6 +26,7 @@ export const allProducts = [
     color: 'white',
     primaryImage: whiteShirt1,
     secondaryImage: whiteShirt2,
+    primaryTumbnail: whitePrimaryTumbnail,
     isNewArrival: true,
     availableSizes: ['xs', 'sm', 'm', 'l', 'xl'],
     description: `Length: Regular length
@@ -60,6 +63,7 @@ export const allProducts = [
     color: 'brown',
     primaryImage: brownShirt1,
     secondaryImage: brownShirt2,
+    primaryTumbnail: brownPrimaryTumbnail,
     availableSizes: ['xs', 'sm', 'm', 'l', 'xl'],
     description: `Length: Regular length
       Sleeve Length: Short sleeve
@@ -72,13 +76,13 @@ export const allProducts = [
       {
         id: 12991,
         image: brownDp,
-        title: 'some random title',
+        title: 'Beige/Floral patterned',
         color: ' brown',
       },
       {
         id: 12990,
         image: whiteDp,
-        title: 'some random title2',
+        title: 'Yellow/patterned',
         color: 'white',
       },
     ],
