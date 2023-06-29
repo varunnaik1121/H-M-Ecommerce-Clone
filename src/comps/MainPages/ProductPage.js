@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import shirtImage1 from '../../assets/shirtImage1.jpeg';
 import shirtImage2 from '../../assets/shirtImage2.jpeg';
@@ -20,6 +20,9 @@ import gridImage1 from '../../assets/gridImage1.webp';
 import gridImage2 from '../../assets/gridImage2.webp';
 import gridImage3 from '../../assets/gridImage3.webp';
 import gridImage4 from '../../assets/gridImage4.webp';
+// import { singleProductData } from '../../data/singleProductData';
+import { allProducts } from '../../data/singleProductData';
+
 const ProductPage = () => {
   const { id } = useParams();
   const data = [
@@ -89,21 +92,43 @@ const ProductPage = () => {
   ];
 
   const sizes = ['xs', 'sm', 'm', 'l', 'xl', 'xxl'];
+
   //a state to select
   const [selectedSize, setSelectedSize] = useState('');
+  const [productData, setProductData] = useState([]);
 
   const handleSizeClick = (size, index) => {
     setSelectedSize(size);
   };
+
+  const fetchItem = (id) => {
+    setProductData(
+      allProducts.find((item, idx) => parseInt(item.id) === parseInt(id))
+    );
+  };
+
+  console.log({ productData, id });
+
+  useEffect(() => {
+    fetchItem(id);
+  }, [id]);
   return (
     <div className="w-full flex px-4 gap-2 relative flex-col lg:flex-row">
       <div className="flex-row gap-3  ">
         <div className="flex gap-2 justify-center">
           <div>
-            <img src={shirtImage1} alt="shirt1" className="object-cover" />
+            <img
+              src={productData?.primaryImage}
+              alt="shirt1"
+              className="object-cover"
+            />
           </div>
           <div className="hidden xl:block ">
-            <img src={shirtImage2} alt="shirt2" className="object-cover" />
+            <img
+              src={productData?.primaryImage}
+              alt="shirt2"
+              className="object-cover"
+            />
           </div>
         </div>
         <div className=" capitalize font-medium bg-[#fff] xl:py-[8%] xl:px-[15%] sm:py-[4%] sm:px-[10%] flex flex-col text justify-center py-3 my-4 items-start ">
@@ -112,31 +137,21 @@ const ProductPage = () => {
           })}
         </div>
         <div className="w-full  grid-cols-2 gap-2 place-content-end hidden lg:grid">
-          <div>
-            <img src={gridImage1} />
-          </div>
-          <div>
-            <img src={gridImage2} />
-          </div>
-          <div>
-            <img src={gridImage3} />
-          </div>
-          <div>
-            <img src={gridImage4} />
-          </div>
-          <div>
-            <img src={gridImage4} />
-          </div>
+          {productData?.gridImages?.map((image, idx) => (
+            <div key={idx}>
+              <img src={image} alt={`${idx + 1}image`} />
+            </div>
+          ))}
         </div>
       </div>
 
       <div className="w-full xl:w-[50%] font-medium  text-[#222] tracking-wide h-full pt-5 pl-4">
-        <h4 className="text-[16px]">Relaxed fit patterned resort shirt</h4>
-        <h1 className=" text-black text-[20px]">Rs. 1299.00</h1>
+        <h4 className="text-[16px]">{productData?.title}</h4>
+        <h1 className=" text-black text-[20px]">Rs {productData?.price}.00</h1>
         <h6 className="py-3 text-sm mb-3 text-center lg:text-left">
-          White/Goldfish
+          {productData?.subtitle}
         </h6>
-        <ColorSlider data={colorsData} />
+        <ColorSlider data={productData?.colors} />
         <div className="flex  items-center  my-3">
           <h6 className="uppercase xl:my-4 my-3 font-semibold tracking-wide text-sm">
             Reviews (45)
@@ -152,7 +167,7 @@ const ProductPage = () => {
         <div>
           <h6 className="capitalize text-sm">sizes</h6>
           <div className="flex gap-2 my-2 tracking-wide flex-wrap text-[12px]">
-            {sizes.map((size, idx) => (
+            {productData?.availableSizes?.map((size, idx) => (
               <button
                 className={`px-8 py-[10px] uppercase border-darkGray border ${
                   selectedSize === size && 'bg-black text-white'
@@ -171,34 +186,30 @@ const ProductPage = () => {
         <div>
           <div className="flex items-center font-medium">
             <BiStore />
-            <h6 className="text-sm mx-3 text-black opacity-70 font-medium">
-              Not available in stores
+            <h6
+              className={`text-sm mx-3 text-black ${
+                productData?.isAvailableInStores ? '' : 'opacity-70'
+              } font-medium`}
+            >
+              {productData?.isAvailableInStores
+                ? 'Available in Stores'
+                : 'Not available in stores'}
             </h6>
           </div>
           <div className="flex items-center font-medium">
             <VscInfo />
             <h6 className="text-sm mx-3 my-2 text-black  font-medium">
-              Standard delivery in 2-7 days
+              {productData?.estimatedDeliveryTime}
             </h6>
           </div>
         </div>
       </div>
       <div className="w-full  grid-cols-2 gap-2 place-content-end lg:hidden grid">
-        <div>
-          <img src={gridImage1} />
-        </div>
-        <div>
-          <img src={gridImage2} />
-        </div>
-        <div>
-          <img src={gridImage3} />
-        </div>
-        <div>
-          <img src={gridImage4} />
-        </div>
-        <div>
-          <img src={gridImage4} />
-        </div>
+        {productData?.gridImages?.map((image, idx) => (
+          <div key={idx}>
+            <img src={image} />
+          </div>
+        ))}
       </div>
     </div>
   );

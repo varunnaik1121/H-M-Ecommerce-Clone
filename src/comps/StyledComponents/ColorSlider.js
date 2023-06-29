@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 const ColorSlider = ({ data }) => {
   const [selected, setSelected] = useState(null);
   const handleSelected = (idx) => {
@@ -8,7 +8,7 @@ const ColorSlider = ({ data }) => {
   };
   return (
     <div className="flex gap-2  justify-center  lg:justify-start ">
-      {data.map((value, idx) => {
+      {data?.map((value, idx) => {
         return (
           <>
             <button
@@ -16,14 +16,16 @@ const ColorSlider = ({ data }) => {
               className={`cursor-pointer ${
                 idx === selected && 'outline-1 outline shadow-md'
               }`}
-              value={value.colorName}
+              value={value.color}
               onClick={() => handleSelected(idx)}
             >
-              <img
-                src={value.image}
-                alt="color1"
-                className="w-[42px] h-[64px] xl:w-[60px] xl:h-[90px] object-cover"
-              />
+              <Link to={`/product/${value.id}`}>
+                <img
+                  src={value.image}
+                  alt="color1"
+                  className="w-[42px] h-[64px] xl:w-[60px] xl:h-[90px] object-cover"
+                />
+              </Link>
             </button>
           </>
         );
