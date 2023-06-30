@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductsSlider from './ProductsSlider';
-
+import { allProducts } from '../data/singleProductData';
 import Chip from './StyledComponents/Chip';
 
 const NewArrivals = () => {
@@ -41,7 +41,7 @@ const NewArrivals = () => {
           return <Chip value={value.title} key={i} />;
         })}
       </div>
-      <ProductsSlider />
+      <ProductsSlider allProducts={allProducts} />
     </div>
   );
 };

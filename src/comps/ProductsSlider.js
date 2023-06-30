@@ -10,7 +10,8 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { useState } from 'react';
 import { useDimension } from '../Hooks/useDimension';
-const ProductsSlider = () => {
+
+const ProductsSlider = ({allProducts}) => {
   const [sliderRef, setSliderRef] = useState(null);
   const width = useDimension();
   const setSlidesToShow = () => {
@@ -164,10 +165,15 @@ const ProductsSlider = () => {
         ref={setSliderRef}
         className="w-full flex justify-evenly"
       >
-        {cardsData.map((value, i) => {
+        {allProducts?.map((value, i) => {
           return (
             <div className="w-full grid grid-cols-16 " key={i}>
-              <Card data={value} index={i} isAddedToCart isNewArrival />
+              <Card
+                data={value}
+                index={i}
+                isAddedToCart
+                isNewArrival={value.isNewArrival}
+              />
             </div>
           );
         })}

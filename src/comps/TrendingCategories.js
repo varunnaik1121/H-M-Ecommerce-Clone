@@ -89,8 +89,8 @@ const TrendingCategories = () => {
   return (
     <div className="w-full h-full  ">
       <div className="w-full">
-        <h3 className="text-lg  font-sm capitalize font-semibold">
-          Trending categories
+        <h3 className="text-lg  font-sm  font-semibold">
+          Categories you might like
         </h3>
       </div>
       <div className="w-full py-4">
@@ -116,10 +116,10 @@ const TrendingCategories = () => {
                     className="rounded-full w-full h-full"
                   />
                 </div>
-                <p className="text-gray-500 capitalize mt-2 text-[12px] font-semibold">
+                <p className="text-black opacity-70 tracking-wide capitalize mt-2 text-sm font-medium  ">
                   {value.category}
                 </p>
-                <p className="text-[12px] font-medium max-w-[85%] text-center leading-4">
+                <p className="text-sm  font-thin max-w-[85%] text-center leading-4">
                   {value.type}
                 </p>
               </SwiperSlide>

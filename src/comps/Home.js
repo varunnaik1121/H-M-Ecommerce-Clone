@@ -22,16 +22,9 @@ const Home = () => {
       <Navbar />
       <Categories />
       <div className=" flex justify-center mt-5">
-        {/* <Sidebar /> */}
         <Outlet />
       </div>
       <Footer />
-      {/* {isSidebarFilterOpen && <SidebarFilter />}
-      {
-        <button onClick={() => dispatch(openSidebarFilter())}>
-          openSidebar
-        </button>
-      } */}
     </div>
   );
 };

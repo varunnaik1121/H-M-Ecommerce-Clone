@@ -87,6 +87,150 @@ export const allProducts = [
       },
     ],
   },
+  {
+    id: 12992,
+    title: 'Relaxed fit patterned shirt',
+    price: 199,
+    totalReviews: 45,
+    estimatedDeliveryTime: 'Standard delivery in 2-7 days',
+    isAvailableInStores: false,
+    isNewArrival: false,
+    subtitle: 'brown/striped',
+    color: 'brown',
+    primaryImage: brownShirt1,
+    secondaryImage: brownShirt2,
+    primaryTumbnail: brownPrimaryTumbnail,
+    availableSizes: ['xs', 'sm', 'm', 'l', 'xl'],
+    description: `Length: Regular length
+      Sleeve Length: Short sleeve
+      Fit: Regular fit
+      Neckline: Round neck
+    `,
+    tumbnailImage: brownDp,
+    gridImages: [gridImage1, gridImage2, gridImage3, gridImage4],
+    colors: [
+      {
+        id: 12991,
+        image: brownDp,
+        title: 'Beige/Floral patterned',
+        color: ' brown',
+      },
+      {
+        id: 12990,
+        image: whiteDp,
+        title: 'Yellow/patterned',
+        color: 'white',
+      },
+    ],
+  },
+  {
+    id: 12992,
+    title: 'Relaxed fit patterned shirt',
+    price: 199,
+    totalReviews: 45,
+    estimatedDeliveryTime: 'Standard delivery in 2-7 days',
+    isAvailableInStores: false,
+    isNewArrival: false,
+    subtitle: 'brown/striped',
+    color: 'brown',
+    primaryImage: brownShirt1,
+    secondaryImage: brownShirt2,
+    primaryTumbnail: brownPrimaryTumbnail,
+    availableSizes: ['xs', 'sm', 'm', 'l', 'xl'],
+    description: `Length: Regular length
+      Sleeve Length: Short sleeve
+      Fit: Regular fit
+      Neckline: Round neck
+    `,
+    tumbnailImage: brownDp,
+    gridImages: [gridImage1, gridImage2, gridImage3, gridImage4],
+    colors: [
+      {
+        id: 12991,
+        image: brownDp,
+        title: 'Beige/Floral patterned',
+        color: ' brown',
+      },
+      {
+        id: 12990,
+        image: whiteDp,
+        title: 'Yellow/patterned',
+        color: 'white',
+      },
+    ],
+  },
+  {
+    id: 12992,
+    title: 'Relaxed fit patterned shirt',
+    price: 199,
+    totalReviews: 45,
+    estimatedDeliveryTime: 'Standard delivery in 2-7 days',
+    isAvailableInStores: false,
+    isNewArrival: false,
+    subtitle: 'brown/striped',
+    color: 'brown',
+    primaryImage: brownShirt1,
+    secondaryImage: brownShirt2,
+    primaryTumbnail: brownPrimaryTumbnail,
+    availableSizes: ['xs', 'sm', 'm', 'l', 'xl'],
+    description: `Length: Regular length
+      Sleeve Length: Short sleeve
+      Fit: Regular fit
+      Neckline: Round neck
+    `,
+    tumbnailImage: brownDp,
+    gridImages: [gridImage1, gridImage2, gridImage3, gridImage4],
+    colors: [
+      {
+        id: 12991,
+        image: brownDp,
+        title: 'Beige/Floral patterned',
+        color: ' brown',
+      },
+      {
+        id: 12990,
+        image: whiteDp,
+        title: 'Yellow/patterned',
+        color: 'white',
+      },
+    ],
+  },
+  {
+    id: 12992,
+    title: 'Relaxed fit patterned shirt',
+    price: 199,
+    totalReviews: 45,
+    estimatedDeliveryTime: 'Standard delivery in 2-7 days',
+    isAvailableInStores: false,
+    isNewArrival: false,
+    subtitle: 'brown/striped',
+    color: 'brown',
+    primaryImage: brownShirt1,
+    secondaryImage: brownShirt2,
+    primaryTumbnail: brownPrimaryTumbnail,
+    availableSizes: ['xs', 'sm', 'm', 'l', 'xl'],
+    description: `Length: Regular length
+      Sleeve Length: Short sleeve
+      Fit: Regular fit
+      Neckline: Round neck
+    `,
+    tumbnailImage: brownDp,
+    gridImages: [gridImage1, gridImage2, gridImage3, gridImage4],
+    colors: [
+      {
+        id: 12991,
+        image: brownDp,
+        title: 'Beige/Floral patterned',
+        color: ' brown',
+      },
+      {
+        id: 12990,
+        image: whiteDp,
+        title: 'Yellow/patterned',
+        color: 'white',
+      },
+    ],
+  },
 ];
 // export const singleProductData = {
 //   id: 12990,
