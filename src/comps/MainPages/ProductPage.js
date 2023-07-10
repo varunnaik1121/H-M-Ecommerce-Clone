@@ -22,6 +22,13 @@ import gridImage3 from '../../assets/gridImage3.webp';
 import gridImage4 from '../../assets/gridImage4.webp';
 // import { singleProductData } from '../../data/singleProductData';
 import { allProducts } from '../../data/singleProductData';
+import ProductsSlider from '../ProductsSlider';
+import Slider from 'react-slick';
+import Card from '../StyledComponents/Card';
+import TrendingCategories from '../TrendingCategories';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { useDimension } from '../../Hooks/useDimension';
 
 const ProductPage = () => {
   const { id } = useParams();
