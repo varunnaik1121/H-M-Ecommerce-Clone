@@ -94,12 +94,14 @@ const ClothType = () => {
             <LinearProgress
               variant="determinate"
               value={20}
-              sx={{ width: '200px', bgcolor: 'gray' }}
+              sx={{
+                width: '200px',
+                bgcolor: 'white',
+              }}
               valueBuffer={100}
-              color={'secondary'}
             />
           </div>
-          <Button title={"Load more Products"} />
+          <Button title={'Load more Products'} />
         </div>
       </div>
     </Wrapper>

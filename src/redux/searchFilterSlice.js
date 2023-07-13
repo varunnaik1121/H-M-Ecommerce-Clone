@@ -4,6 +4,7 @@ export const searchSlice = createSlice({
   initialState: {
     userSelectedSortByValue: 'recommmended',
     userSelectedFilters: [],
+    searchValue: '',
   },
 
   reducers: {
@@ -21,6 +22,9 @@ export const searchSlice = createSlice({
       );
       state.userSelectedFilters = filtered;
     },
+    updateSearchValue: (state, action) => {
+      state.searchValue = action.payload;
+    },
   },
 });
 
@@ -28,5 +32,6 @@ export const {
   updateSelectedSortByValue,
   updateUserSelectedFilters,
   removeSelectedFilter,
+  updateSearchValue,
 } = searchSlice.actions;
 export default searchSlice.reducer;

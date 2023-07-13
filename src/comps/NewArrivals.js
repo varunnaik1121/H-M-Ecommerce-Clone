@@ -36,7 +36,7 @@ const NewArrivals = () => {
       <div>
         <h3 className="text-lg font-semibold mb-4">New Arrivals</h3>
       </div>
-      <div className="flex gap-2  w-full mb-1 ">
+      <div className="flex gap-2  w-full mb-2 overflow-x-scroll mt-2">
         {chipsData.map((value, i) => {
           return <Chip value={value.title} key={i} />;
         })}

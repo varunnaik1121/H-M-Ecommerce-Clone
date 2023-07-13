@@ -29,6 +29,7 @@ import TrendingCategories from '../TrendingCategories';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useDimension } from '../../Hooks/useDimension';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const ProductPage = () => {
   const { id } = useParams();

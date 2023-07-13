@@ -5,6 +5,7 @@ import {
   updateSelectedSortByValue,
   removeSelectedFilter,
   updateUserSelectedFilters,
+  updateSearchValue,
 } from '../../redux/searchFilterSlice';
 
 import { HiArrowRight } from 'react-icons/hi';

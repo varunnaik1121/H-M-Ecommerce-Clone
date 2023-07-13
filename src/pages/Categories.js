@@ -29,21 +29,26 @@ const Categories = () => {
       <Sidebar data={sidebarCategories} />
       <div className="xl:w-[65%] w-full sm:m-6 sm:w-full flex flex-col mt-2 mx-4">
         <Title title={'View all'} />
-        <SingleAds mobileImage={menMobileImage} laptopImage={menLaptopImage} />
+        <SingleAds
+          mobileImage={menMobileImage}
+          laptopImage={menLaptopImage}
+          btnName={'Shop Now'}
+        />
         <SingleAds
           mobileImage={menMobileImage2}
           laptopImage={menLaptopImage2}
+          btnName={'Shop Now'}
         />
         <SingleAds
           mobileImage={menMobileImage3}
           laptopImage={menLaptopImage3}
+          btnName={'Shop Now'}
         />
         <CategoryDescription
           description={description}
           title={"Men's Clothing"}
         />
       </div>
-      
     </Wrapper>
   );
 };
