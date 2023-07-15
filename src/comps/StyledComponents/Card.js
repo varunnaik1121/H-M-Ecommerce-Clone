@@ -1,17 +1,42 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsFillHeartFill } from 'react-icons/bs';
 
 import { Tooltip } from '@mui/material';
 import heartIcon from '../../assets/heartIcon.png';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
+import {
+  addToFavourites,
+  removeFromFavourites,
+} from '../../redux/favouritesSlice';
+
 const Card = ({ data, isAddedToCart, isNewArrival, isNotSlider }) => {
+  const dispatch = useDispatch();
+  const { favouriteItems } = useSelector((state) => state.favourites);
   const navigate = useNavigate();
   const [isMouseEntered, setIsMouseEntered] = useState(false);
 
+  // function to handle the routes
   const handleRoute = (id) => {
     navigate(`/product/${id}`);
   };
+
+  useEffect(() => {
+    console.log(favouriteItems);
+  }, [favouriteItems]);
+
+  //fuction to handle to favourites
+  const handleFavourites = (e, id) => {
+    e.stopPropagation();
+    dispatch(addToFavourites(id));
+  };
+
+  const handleRemoveFromFavourites = (e, id) => {
+    e.stopPropagation();
+    dispatch(removeFromFavourites(id));
+  };
+
   return (
     <div
       className={`relative w-full h-full sm:px-1 px-1    mr-2 my-2   ${
@@ -27,11 +52,18 @@ const Card = ({ data, isAddedToCart, isNewArrival, isNotSlider }) => {
             onMouseEnter={() => setIsMouseEntered(true)}
             onMouseLeave={() => setIsMouseEntered(false)}
           />
-          <div className="absolute right-2 bottom-2 p-1 hover:scale-125 transition-all cursor-pointer">
+          <div className="absolute right-2 bottom-2 p-1 hover:scale-125 transition-all cursor-pointer z-50">
             {isAddedToCart ? (
-              <BsFillHeartFill className="text-xl text-red font-thin" />
+              <BsFillHeartFill
+                className="text-xl text-red font-thin border"
+                onClick={(e, id) => handleRemoveFromFavourites(e, data.id)}
+              />
             ) : (
-              <img src={heartIcon} className="right-0 w-[30px] h-auto"></img>
+              <img
+                src={heartIcon}
+                className="right-0 w-[30px] h-auto z-50 border"
+                onClick={(e, id) => handleFavourites(e, data.id)}
+              ></img>
             )}
           </div>
         </button>
