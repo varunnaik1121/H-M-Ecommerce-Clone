@@ -10,6 +10,9 @@ import SubCategory from './comps/MainPages/SubCategory';
 import Product from './comps/MainPages/Product';
 import ClothType from './comps/MainPages/ClothType';
 import ProductPage from './comps/MainPages/ProductPage';
+import Cart from './comps/MainPages/Cart';
+import { Search } from '@mui/icons-material';
+import SearchItems from './comps/MainPages/SearchItems';
 function App() {
   return (
     <>
@@ -29,6 +32,8 @@ function App() {
               path="/:categories/:subCategory/:clothType"
               element={<ClothType></ClothType>}
             ></Route>
+            <Route path="cart" element={<Cart />} />
+            <Route path="search-results" element={<SearchItems />}></Route>
           </Route>
 
           <Route path="product" element={<Home />}>
