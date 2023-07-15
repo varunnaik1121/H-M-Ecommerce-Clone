@@ -4,13 +4,16 @@ export const favouritesSlice = createSlice({
   initialState: {
     favouriteItems: [],
   },
-
+  //always use = to update in reducers
   reducers: {
     addToFavourites: (state, action) => {
       state.favouriteItems.push(action.payload);
     },
     removeFromFavourites: (state, action) => {
-      state.favouriteItems.filter((item) => item.id !== action.payload.id);
+      console.log(action.payload);
+      state.favouriteItems = state.favouriteItems.filter(
+        (item) => item !== action.payload
+      );
     },
   },
 });

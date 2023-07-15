@@ -10,21 +10,26 @@ import {
   addToFavourites,
   removeFromFavourites,
 } from '../../redux/favouritesSlice';
+import { ConstructionOutlined } from '@mui/icons-material';
 
 const Card = ({ data, isAddedToCart, isNewArrival, isNotSlider }) => {
   const dispatch = useDispatch();
   const { favouriteItems } = useSelector((state) => state.favourites);
   const navigate = useNavigate();
   const [isMouseEntered, setIsMouseEntered] = useState(false);
+  const [isItemAddedToCart, setIsItemAddedToCart] = useState(
+    favouriteItems.some((item) => item === data.id)
+  );
+
+  useEffect(() => {
+    setIsItemAddedToCart(favouriteItems.some((item) => item === data.id));
+    console.log({ favouriteItems });
+  }, [favouriteItems, data]);
 
   // function to handle the routes
   const handleRoute = (id) => {
     navigate(`/product/${id}`);
   };
-
-  useEffect(() => {
-    console.log(favouriteItems);
-  }, [favouriteItems]);
 
   //fuction to handle to favourites
   const handleFavourites = (e, id) => {
@@ -53,7 +58,7 @@ const Card = ({ data, isAddedToCart, isNewArrival, isNotSlider }) => {
             onMouseLeave={() => setIsMouseEntered(false)}
           />
           <div className="absolute right-2 bottom-2 p-1 hover:scale-125 transition-all cursor-pointer z-50">
-            {isAddedToCart ? (
+            {isItemAddedToCart ? (
               <BsFillHeartFill
                 className="text-xl text-red font-thin border"
                 onClick={(e, id) => handleRemoveFromFavourites(e, data.id)}
